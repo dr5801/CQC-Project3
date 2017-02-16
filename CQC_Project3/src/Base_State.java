@@ -1,79 +1,75 @@
-import enums.State_Enum;
-
 /**
  * @author Drew Rife and Jordan Long
  *
+ * A state abstract class that all children state class inherit
  */
-public abstract class Base_State implements State {
+public abstract class Base_State implements State 
+{
+	protected int sign;
+	protected double value;
+	protected double point;
 
 	/**
-	 * 
+	 * Initialize sign, value, point according to project values 
 	 */
-	public Base_State() {
-		// TODO Auto-generated constructor stub
+	public Base_State() 
+	{
+		sign = 1;
+		value = 0;
+		point = 1.0;
 	}
 
-	/* (non-Javadoc)
-	 * @see State#setSign(int)
-	 */
-	@Override
-	public void setSign(int sign) {
-		// TODO Auto-generated method stub
-
-	}
-
-	/* (non-Javadoc)
-	 * @see State#getSign()
+	/**
+	 * @param sign
 	 */
 	@Override
-	public int getSign() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void setSign(int sign) 
+	{
+		this.sign = sign;
 	}
 
-	/* (non-Javadoc)
-	 * @see State#setValue(double)
+	/**
+	 * @return the sign
 	 */
 	@Override
-	public void setValue(double value) {
-		// TODO Auto-generated method stub
-
+	public int getSign() 
+	{
+		return sign;
 	}
 
-	/* (non-Javadoc)
-	 * @see State#getValue()
+	/**
+	 * @param value
 	 */
 	@Override
-	public double getValue() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void setValue(double value) 
+	{
+		this.value = value;
 	}
 
-	/* (non-Javadoc)
-	 * @see State#setPoint(double)
+	/**
+	 * @return the value
 	 */
 	@Override
-	public void setPoint(double point) {
-		// TODO Auto-generated method stub
-
+	public double getValue() 
+	{
+		return value;
 	}
 
-	/* (non-Javadoc)
-	 * @see State#getPoint()
+	/**
+	 * @param point
 	 */
 	@Override
-	public double getPoint() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void setPoint(double point) 
+	{
+		this.point = point;
 	}
 
-	/* (non-Javadoc)
-	 * @see State#evaluate(char)
+	/**
+	 * @return point
 	 */
 	@Override
-	public State_Enum evaluate(char input) {
-		// TODO Auto-generated method stub
-		return null;
+	public double getPoint() 
+	{
+		return point;
 	}
-
 }
