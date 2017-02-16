@@ -37,5 +37,11 @@ public interface State
 	 */
 	double getPoint();
 	
+	/**
+	 * Decides what new state to return based on the character input
+	 * 
+	 * @param input
+	 * @return the new state
+	 */
 	State_Enum evaluate(char input);
 }
