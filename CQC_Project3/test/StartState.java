@@ -22,6 +22,10 @@ public class StartState extends BaseState
 			point = .1;
 			nextState = State_Enum.DECIMAL;
 		}
+		else if (input == '+')
+		{
+			nextState = State_Enum.INTEGER;
+		}
 		else
 		{
 			nextState = State_Enum.END;
