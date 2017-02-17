@@ -24,13 +24,16 @@ public class TestStartState
 		assertEquals(1.0f, startState.getPoint(), 0.0001);
 	}
 	
+	/**
+	 * test sending a letter as an input
+	 */
 	@Test
-	public void testCharacterInput()
+	public void testCharacterLetterInput()
 	{
 		State startState = new StartState();
 		State_Enum nextState = startState.evaluate('a');
 	
-		assertEquals(-1, startState.getSign());
+		assertEquals(1, startState.getSign());
 		assertEquals(0, startState.getValue(), 0.0001);
 		assertEquals(nextState, State_Enum.INTEGER);
 	}
