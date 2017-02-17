@@ -6,7 +6,7 @@ import org.junit.Test;
  * 
  * Tests the Start_State
  */
-public class Test_Start_State 
+public class TestStartState 
 {
 	
 	/**
