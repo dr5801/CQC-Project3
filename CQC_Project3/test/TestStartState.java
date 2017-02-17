@@ -1,6 +1,8 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import enums.State_Enum;
+
 /**
  * @author Drew Rife and Jordan Long
  * 
@@ -22,5 +24,14 @@ public class TestStartState
 		assertEquals(1.0f, startState.getPoint(), 0.0001);
 	}
 	
+	@Test
+	public void testCharacterInput()
+	{
+		State startState = new StartState();
+		State_Enum nextState = startState.evaluate('a');
 	
+		assertEquals(-1, startState.getSign());
+		assertEquals(0, startState.getValue(), 0.0001);
+		assertEquals(nextState, State_Enum.INTEGER);
+	}
 }
