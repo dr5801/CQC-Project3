@@ -3,7 +3,7 @@
  *
  * A state abstract class that all children state class inherit
  */
-public abstract class Base_State implements State 
+public abstract class BaseState implements State 
 {
 	protected int sign;
 	protected double value;
@@ -12,7 +12,7 @@ public abstract class Base_State implements State
 	/**
 	 * Initialize sign, value, point according to project values 
 	 */
-	public Base_State() 
+	public BaseState() 
 	{
 		sign = 1;
 		value = 0;

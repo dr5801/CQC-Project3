@@ -5,7 +5,7 @@ import enums.State_Enum;
  *
  * A MockState of BaseState used for testing
  */
-public class MockState extends Base_State 
+public class MockState extends BaseState 
 {
 	/**
 	 * Decides what new state to return based on the character input

@@ -9,4 +9,10 @@ import org.junit.Test;
 public class Test_Start_State 
 {
 
+	@Test
+	public void testInitialization()
+	{
+		State startState = new StartState();
+		
+	}
 }
