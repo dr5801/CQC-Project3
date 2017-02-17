@@ -37,4 +37,27 @@ public class TestStartState
 		assertEquals(0, startState.getValue(), 0.0001);
 		assertEquals(nextState, State_Enum.INTEGER);
 	}
+	
+	/**
+	 * tests inputting an integer
+	 */
+	@Test
+	public void testIntegerInput()
+	{
+		State startState = new StartState();
+		State_Enum nextState = startState.evaluate('9');
+		
+		assertEquals(1, startState.getSign());
+		assertEquals(9, startState.getValue(), 0.0001);
+		assertEquals(nextState, State_Enum.INTEGER);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

@@ -14,7 +14,8 @@ public class StartState extends BaseState
 		
 		if(Character.isDigit(input))
 		{
-			
+			value = Character.getNumericValue(input);
+			nextState = State_Enum.INTEGER;
 		}
 		else
 		{
