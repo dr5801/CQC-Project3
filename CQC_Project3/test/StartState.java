@@ -6,6 +6,12 @@ public class StartState extends BaseState
 	
 	/**
 	 * Decides on which state to switch to based on the @param input
+	 * 
+	 * Digit -> INTEGER
+	 *   '+' -> INTEGER
+	 *   '-' -> INTEGER
+	 *   '.' -> DECIMAL
+	 *  Else -> END
 	 */
 	@Override
 	public State_Enum evaluate(char input) 
@@ -24,6 +30,11 @@ public class StartState extends BaseState
 		}
 		else if (input == '+')
 		{
+			nextState = State_Enum.INTEGER;
+		}
+		else if (input == '-')
+		{
+			sign = -1;
 			nextState = State_Enum.INTEGER;
 		}
 		else
