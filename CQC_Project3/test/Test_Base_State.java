@@ -20,5 +20,16 @@ public class Test_Base_State
 		assertEquals(0, state.getValue(), 0.0001);
 		assertEquals(1.000f, state.getPoint(), 0.0001);
 	}
-
+	
+	
+	@Test
+	public void testSettingSign()
+	{
+		State state = new MockState();
+		state.setSign(0);
+		
+		assertEquals(0, state.getSign());
+		assertEquals(0, state.getValue(), 0.0001);
+		assertEquals(1.000f, state.getPoint(), 0.0001);
+	}
 }
