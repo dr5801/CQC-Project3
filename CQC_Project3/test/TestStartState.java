@@ -67,8 +67,19 @@ public class TestStartState
 		assertEquals(State_Enum.DECIMAL, nextState);
 	}
 	
-	
-	
+	/**
+	 * tests inputting a '+' plus sign as a character input 
+	 */
+	@Test
+	public void testPlusSignInput()
+	{
+		State startState = new StartState();
+		State_Enum nextState = startState.evaluate('+');
+		
+		assertEquals(1, startState.getSign());
+		assertEquals(0, startState.getValue(), 0.0001);
+		assertEquals(State_Enum.INTEGER, nextState);
+	}
 	
 	
 	
