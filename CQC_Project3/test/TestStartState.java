@@ -81,7 +81,17 @@ public class TestStartState
 		assertEquals(State_Enum.INTEGER, nextState);
 	}
 	
-	
-	
-	
+	/**
+	 * Tests inputt a '-' negative sign as a character input
+	 */
+	@Test
+	public void testNegativeSignInput()
+	{
+		State startState = new StartState();
+		State_Enum nextState = startState.evaluate('-');
+		
+		assertEquals(-1, startState.getSign());
+		assertEquals(0, startState.getValue(), 0.0001);
+		assertEquals(State_Enum.INTEGER, nextState);
+	}
 }
