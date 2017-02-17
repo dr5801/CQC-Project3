@@ -15,21 +15,51 @@ public class Test_Base_State
 	@Test
 	public void testInitializationOfBaseState()
 	{
-		State state = new MockState();
-		assertEquals(1, state.getSign());
-		assertEquals(0, state.getValue(), 0.0001);
-		assertEquals(1.000f, state.getPoint(), 0.0001);
+		State mockState = new MockState();
+		assertEquals(1, mockState.getSign());
+		assertEquals(0, mockState.getValue(), 0.0001);
+		assertEquals(1.000f, mockState.getPoint(), 0.0001);
 	}
 	
-	
+	/**
+	 * Test by setting sign a new value and seeing if it is returned from the getter
+	 */
 	@Test
 	public void testSettingSign()
 	{
-		State state = new MockState();
-		state.setSign(0);
+		State mockState = new MockState();
+		mockState.setSign(0);
 		
-		assertEquals(0, state.getSign());
-		assertEquals(0, state.getValue(), 0.0001);
-		assertEquals(1.000f, state.getPoint(), 0.0001);
+		assertEquals(0, mockState.getSign());
+		assertEquals(0, mockState.getValue(), 0.0001);
+		assertEquals(1.000f, mockState.getPoint(), 0.0001);
+	}
+	
+	/**
+	 * Test by setting value a new value and seeing if it is returned from the getter
+	 */
+	@Test
+	public void testSettingValue()
+	{
+		State mockState = new MockState();
+		mockState.setValue(20);
+		
+		assertEquals(1, mockState.getSign());
+		assertEquals(20, mockState.getValue(), 0.0001);
+		assertEquals(1.000f, mockState.getPoint(), 0.0001);
+	}
+	
+	/**
+	 * Test by setting point a new value and seeing if it is returned for the getter
+	 */
+	@Test
+	public void testSettingPoint()
+	{
+		State mockState = new MockState();
+		mockState.setPoint(0.071);
+		
+		assertEquals(1, mockState.getSign());
+		assertEquals(0, mockState.getValue(), 0.0001);
+		assertEquals(0.071f, mockState.getPoint(), 0.0001);
 	}
 }
