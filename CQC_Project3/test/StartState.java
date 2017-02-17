@@ -12,17 +12,22 @@ public class StartState extends BaseState
 	{
 		State_Enum nextState = null;
 		
-		if(Character.isDigit(input))
+		if (Character.isDigit(input))
 		{
 			value = Character.getNumericValue(input);
 			nextState = State_Enum.INTEGER;
+		}
+		else if (input == '.')
+		{
+			point = .1;
+			nextState = State_Enum.DECIMAL;
 		}
 		else
 		{
 			nextState = State_Enum.END;
 		}
 		
-		return State_Enum.INTEGER;
+		return nextState;
 	}
 
 }

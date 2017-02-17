@@ -35,7 +35,7 @@ public class TestStartState
 	
 		assertEquals(1, startState.getSign());
 		assertEquals(0, startState.getValue(), 0.0001);
-		assertEquals(State_Enum.INTEGER, nextState);
+		assertEquals(State_Enum.END, nextState);
 	}
 	
 	/**
