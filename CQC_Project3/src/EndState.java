@@ -1,12 +1,14 @@
 import enums.State_Enum;
 
-public class EndState extends BaseState
+/**
+ * 
+ * @author Drew Rife and Jordan Long
+ *
+ */
+public class EndState extends BaseState 
 {
 	public EndState() {}
 
-	/**
-	 * There is no other state to transition to
-	 */
 	@Override
 	public State_Enum evaluate(char input) 
 	{
@@ -14,5 +16,6 @@ public class EndState extends BaseState
 		value = 0;
 		return nextState;
 	}
-
+	
+	
 }
