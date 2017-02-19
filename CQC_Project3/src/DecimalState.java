@@ -1,7 +1,16 @@
 import enums.State_Enum;
 
-public class DecimalState extends BaseState {
+public class DecimalState extends BaseState 
+{
+	public DecimalState() {}
 
+	/**
+	 * Evaluates a given input
+	 * 
+	 * DIGIT   -> DECIMAL STATE
+	 * '\0'    -> END STATE
+	 * invalid -> END STATE
+	 */
 	@Override
 	public State_Enum evaluate(char input) 
 	{
