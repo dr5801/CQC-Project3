@@ -7,8 +7,9 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses(
 		{
-			TestIntegerState.class,
+			TestBaseState.class,
 			TestStartState.class,
-			TestBaseState.class
+			TestIntegerState.class,
+			TestDecimalState.class
 		})
 public class RunAllTests {}

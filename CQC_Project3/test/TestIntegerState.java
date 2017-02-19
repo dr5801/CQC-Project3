@@ -25,6 +25,8 @@ public class TestIntegerState
 	
 	/**
 	 * Tests integer state evaluating a digit input
+	 * 
+	 * SHOULD STAY AT INTEGER STATE
 	 */
 	@Test
 	public void testDigitInput()
@@ -44,6 +46,8 @@ public class TestIntegerState
 	
 	/**
 	 * Tests integer state evaluating a decimal input
+	 * 
+	 * SHOULD TRANSITION TO DECIMAL STATE
 	 */
 	@Test
 	public void testDecimalInput()
@@ -59,6 +63,8 @@ public class TestIntegerState
 	
 	/**
 	 * tests integer state evaluating a null terminator
+	 * 
+	 * SHOULD TRANSITION TO END STATE
 	 */
 	@Test
 	public void testNullTerminator()
@@ -76,6 +82,8 @@ public class TestIntegerState
 	
 	/**
 	 * tests integer state evaluating invalid input
+	 * 
+	 * SHOULD TRANSITION TO END STATE
 	 */
 	@Test
 	public void invalidInput()
