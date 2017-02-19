@@ -17,7 +17,12 @@ public class DecimalState extends BaseState {
 			value *= sign;
 			nextState = State_Enum.END;
 		}
-		// TODO Auto-generated method stub
+		else
+		{
+			value = 0;
+			nextState = State_Enum.END;
+		}
+		
 		return nextState;
 	}
 
