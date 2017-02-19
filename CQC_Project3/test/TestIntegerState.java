@@ -8,6 +8,9 @@ import org.junit.Test;
  */
 public class TestIntegerState 
 {
+	/**
+	 * Tests the initialization of integer state
+	 */
 	@Test
 	public void testInitialization()
 	{
