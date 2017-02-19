@@ -40,5 +40,25 @@ public class TestDecimalState
 		assertEquals(1, decimalState.getSign());
 		assertEquals(4.9, decimalState.getValue(), 0.0001);
 		assertEquals(.01f, decimalState.getPoint(), 0.0001);
+		assertEquals(State_Enum.DECIMAL, nextState);
+	}
+	
+	/**
+	 * tests DecimalState evaluating null terminator as input
+	 * 
+	 * SHOULD TRANSITION TO END STATE
+	 */
+	@Test
+	public void testNullTerminatorInput()
+	{
+		DecimalState decimalState = new DecimalState();
+		decimalState.setSign(-1);
+		decimalState.setValue(4);
+		
+		State_Enum nextState = decimalState.evaluate('\0');
+		assertEquals(-1, decimalState.getSign());
+		assertEquals(-4, decimalState.getValue(), 0.0001);
+		assertEquals(1.0f, decimalState.getPoint(), 0.0001);
+		assertEquals(State_Enum.END, nextState);
 	}
 }
