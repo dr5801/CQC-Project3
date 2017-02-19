@@ -23,8 +23,8 @@ public class IntegerState extends BaseState
 		
 		if(Character.isDigit(input))
 		{
-			value *= 10;
-			value += Character.getNumericValue(input);
+			value = (value * 10) + Character.getNumericValue(input);
+			nextState = State_Enum.INTEGER;
 		}
 		else if(input == '.')
 		{
