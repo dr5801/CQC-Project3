@@ -16,6 +16,4 @@ public class EndState extends BaseState
 		value = 0;
 		return nextState;
 	}
-	
-	
 }
