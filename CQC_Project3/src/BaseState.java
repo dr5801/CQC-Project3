@@ -16,7 +16,7 @@ public abstract class BaseState implements State
 	{
 		sign = 1;
 		value = 0;
-		point = 1.0;
+		point = 0.0;
 	}
 
 	/**

@@ -60,7 +60,7 @@ public class StateManager
 	 */
 	public double getResult()
 	{
-		return currentState.getValue() * currentState.getSign();
+		return currentState.getValue();
 	}
 
 }
