@@ -18,7 +18,7 @@ public class TestBaseState
 		State mockState = new MockState();
 		assertEquals(1, mockState.getSign());
 		assertEquals(0, mockState.getValue(), 0.0001);
-		assertEquals(1.000f, mockState.getPoint(), 0.0001);
+		assertEquals(0.0f, mockState.getPoint(), 0.0001);
 	}
 	
 	/**
@@ -32,7 +32,7 @@ public class TestBaseState
 		
 		assertEquals(0, mockState.getSign());
 		assertEquals(0, mockState.getValue(), 0.0001);
-		assertEquals(1.000f, mockState.getPoint(), 0.0001);
+		assertEquals(0.0f, mockState.getPoint(), 0.0001);
 	}
 	
 	/**
@@ -46,7 +46,7 @@ public class TestBaseState
 		
 		assertEquals(1, mockState.getSign());
 		assertEquals(20, mockState.getValue(), 0.0001);
-		assertEquals(1.000f, mockState.getPoint(), 0.0001);
+		assertEquals(0.0f, mockState.getPoint(), 0.0001);
 	}
 	
 	/**

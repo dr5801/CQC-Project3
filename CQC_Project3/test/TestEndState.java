@@ -22,7 +22,7 @@ public class TestEndState
 		
 		assertEquals(1, endState.getSign());
 		assertEquals(0, endState.getValue(), 0.0001);
-		assertEquals(1.0f, endState.getPoint(), 0.0001);
+		assertEquals(0.0f, endState.getPoint(), 0.0001);
 	}
 
 	/**

@@ -21,7 +21,7 @@ public class TestDecimalState
 		DecimalState decimalState = new DecimalState();
 		assertEquals(1, decimalState.getSign());
 		assertEquals(0, decimalState.getValue(), 0.0001);
-		assertEquals(1.0f, decimalState.getPoint(), 0.0001);
+		assertEquals(0.0f, decimalState.getPoint(), 0.0001);
 	}
 	
 	/**
@@ -58,7 +58,7 @@ public class TestDecimalState
 		State_Enum nextState = decimalState.evaluate('\0');
 		assertEquals(-1, decimalState.getSign());
 		assertEquals(-4, decimalState.getValue(), 0.0001);
-		assertEquals(1.0f, decimalState.getPoint(), 0.0001);
+		assertEquals(0.0f, decimalState.getPoint(), 0.0001);
 		assertEquals(State_Enum.END, nextState);
 	}
 	

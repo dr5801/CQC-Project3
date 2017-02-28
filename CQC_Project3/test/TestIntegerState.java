@@ -20,7 +20,7 @@ public class TestIntegerState
 		
 		assertEquals(1, integerState.getSign());
 		assertEquals(0, integerState.getValue(), 0.0001);
-		assertEquals(1.0f, integerState.getPoint(), 0.0001);
+		assertEquals(0.0f, integerState.getPoint(), 0.0001);
 	}
 	
 	/**
@@ -40,7 +40,7 @@ public class TestIntegerState
 		State_Enum nextState = integerState.evaluate('5');
 		assertEquals(-1, integerState.getSign());
 		assertEquals(15, integerState.getValue(), 0.0001);
-		assertEquals(1.0f, integerState.getPoint(), 0.0001);
+		assertEquals(0.0f, integerState.getPoint(), 0.0001);
 		assertEquals(State_Enum.INTEGER, nextState);
 	}
 	
@@ -76,7 +76,7 @@ public class TestIntegerState
 		State_Enum nextState = integerState.evaluate('\0');
 		assertEquals(-1, integerState.getSign());
 		assertEquals(-300, integerState.getValue(), 0.0001);
-		assertEquals(1.0f, integerState.getPoint(), 0.0001);
+		assertEquals(0.0f, integerState.getPoint(), 0.0001);
 		assertEquals(State_Enum.END, nextState);
 	}
 	
